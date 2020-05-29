@@ -20,19 +20,18 @@ class Server429Error(Exception):
 
 
 class ChargebeeClient(BaseClient):
-
-    def __init__(self, config, api_result_limit=100, include_deleted=True):
+    def __init__(self, config, api_result_limit=100, include_deleted=False):
         super().__init__(config)
 
         self.api_result_limit = api_result_limit
         self.include_deleted = include_deleted
-        self.user_agent = self.config.get('user_agent')
+        self.user_agent = self.config.get("user_agent")
 
     def get_headers(self):
         headers = {}
 
-        if self.config.get('user_agent'):
-            headers['User-Agent'] = self.config.get('user_agent')
+        if self.config.get("user_agent"):
+            headers["User-Agent"] = self.config.get("user_agent")
 
         return headers
 
@@ -41,15 +40,14 @@ class ChargebeeClient(BaseClient):
         if params is None:
             params = {}
 
-        params['limit'] = self.api_result_limit
-        params['include_deleted'] = self.include_deleted
+        params["limit"] = self.api_result_limit
+        params["include_deleted"] = self.include_deleted
 
         return params
 
-    @backoff.on_exception(backoff.expo,
-                          (Server4xxError, Server429Error),
-                          max_tries=5,
-                          factor=3)
+    @backoff.on_exception(
+        backoff.expo, (Server4xxError, Server429Error), max_tries=5, factor=3
+    )
     @utils.ratelimit(100, 60)
     def make_request(self, url, method, params=None, body=None):
 
@@ -61,10 +59,11 @@ class ChargebeeClient(BaseClient):
         response = requests.request(
             method,
             url,
-            auth=(self.config.get("api_key"), ''),
+            auth=(self.config.get("api_key"), ""),
             headers=self.get_headers(),
             params=self.get_params(params),
-            json=body)
+            json=body,
+        )
 
         response_json = response.json()
 
