@@ -397,39 +397,6 @@
         }
       }
     },
-    "linked_orders": {
-      "type": ["null", "array"],
-      "items": {
-        "type": ["null", "object"],
-        "properties": {
-          "id": {
-            "type": ["null", "string"]
-          },
-          "document_number": {
-            "type": ["null", "string"]
-          },
-          "status": {
-            "type": ["null", "string"]
-          },
-          "order_type": {
-            "type": ["null", "string"]
-          },
-          "reference_id": {
-            "type": ["null", "string"]
-          },
-          "fulfillment_status": {
-            "type": ["null", "string"]
-          },
-          "batch_id": {
-            "type": ["null", "string"]
-          },
-          "created_at": {
-            "type": ["null", "string"],
-            "format": "date-time"
-          }
-        }
-      }
-    },
     "notes": {
       "type": ["null", "array"],
       "items": {
@@ -448,7 +415,7 @@
       }
     },
     "shipping_address": {
-      "type": ["null","object"],
+      "type": ["null", "object"],
       "properties": {
         "first_name": {
           "type": ["null", "string"]
@@ -495,7 +462,7 @@
       }
     },
     "billing_address": {
-      "type": ["null","object"],
+      "type": ["null", "object"],
       "properties": {
         "first_name": {
           "type": ["null", "string"]

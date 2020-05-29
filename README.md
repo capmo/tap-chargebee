@@ -15,7 +15,6 @@ This tap:
   - [Events](https://apidocs.chargebee.com/docs/api/events)
   - [Gifts](https://apidocs.chargebee.com/docs/api/gifts)
   - [Invoices](https://apidocs.chargebee.com/docs/api/invoices)
-  - [Orders](https://apidocs.chargebee.com/docs/api/orders)
   - [Payment Sources](https://apidocs.chargebee.com/docs/api/payment_sources)
   - [Plans](https://apidocs.chargebee.com/docs/api/plans)
   - [Subscriptions](https://apidocs.chargebee.com/docs/api/subscriptions)
