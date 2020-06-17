@@ -77,7 +77,7 @@
       "type": ["null", "boolean"]
     },
     "cf_company_id": {
-      "type": ["null","integer"]
+      "type": ["null", "integer"]
     },
     "allow_direct_debit": {
       "type": ["null", "boolean"]
@@ -137,6 +137,9 @@
     "exemption_details": {
       "type": ["null", "string"]
     },
+    "business_customer_without_vat_number": {
+      "type": ["null", "boolean"]
+    },
     "custom_fields": {
       "type": ["null", "string"]
     },
@@ -181,7 +184,7 @@
       "type": ["null", "string"]
     },
     "billing_address": {
-      "type": ["null","object"],
+      "type": ["null", "object"],
       "properties": {
         "first_name": {
           "type": ["null", "string"]
@@ -230,7 +233,7 @@
     "referral_urls": {
       "type": ["null", "array"],
       "items": {
-        "type": ["null","object"],
+        "type": ["null", "object"],
         "properties": {
           "external_customer_id": {
             "type": ["null", "string"]
@@ -264,7 +267,7 @@
     "contacts": {
       "type": ["null", "array"],
       "items": {
-        "type": ["null","object"],
+        "type": ["null", "object"],
         "properties": {
           "id": {
             "type": ["null", "string"]
@@ -300,7 +303,7 @@
       }
     },
     "payment_method": {
-      "type": ["null","object"],
+      "type": ["null", "object"],
       "properties": {
         "type": {
           "type": ["null", "string"]
@@ -325,7 +328,7 @@
     "balances": {
       "type": ["null", "array"],
       "items": {
-        "type": ["null","object"],
+        "type": ["null", "object"],
         "properties": {
           "promotional_credits": {
             "type": ["null", "integer"]
