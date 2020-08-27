@@ -12,6 +12,7 @@ from .virtual_bank_accounts import VirtualBankAccountsStream
 from .credit_notes import CreditNotesStream
 from .gifts import GiftsStream
 from .promotional_credits import PromotionalCreditsStream
+from .comments import CommentsStream
 
 AVAILABLE_STREAMS = [
     EventsStream,
@@ -27,4 +28,5 @@ AVAILABLE_STREAMS = [
     SubscriptionsStream,
     TransactionsStream,
     VirtualBankAccountsStream,
+    CommentsStream,
 ]
